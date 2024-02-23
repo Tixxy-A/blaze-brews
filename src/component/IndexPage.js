@@ -3,7 +3,8 @@ import img1 from '../picture/pic3.jpg';
 import React from 'react';
 import {useState} from 'react';
 export default function Index() {
-    console.log('jeko')
+    console.log('jeko');
+    console.log("lolo")
     return (
         <div className="h-screen  absolute bg-red-200">
 
