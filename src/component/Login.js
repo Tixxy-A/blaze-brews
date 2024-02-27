@@ -1,18 +1,33 @@
+import axios from 'axios';
 import profile from '../picture/profile.jpg'
 import { useForm } from 'react-hook-form';
-import {Link} from 'react-router-dom'
+import {Link, Navigate, redirect} from 'react-router-dom'
+import { useContext, useState } from 'react';
+import { AuthContext } from '../context/UserContext';
 export default function LoginPage() {
     const { register, watch, handleSubmit, formState: { errors } } = useForm();
-    function formSubmit(val){
-        console.log(val);
+    const {user,setUser}=useContext(AuthContext);
+    const [redirect,setRedirect]=useState();
+    console.log(user);
+    async function formSubmit(val){
+        //console.log(val);
+        const res=await axios.post('http://localhost:3001/login',val);
+        setUser(res.data);
+        //console.log(res.data);
+        setRedirect('/shop');
+    }
+    if(redirect){
+        return <Navigate to={redirect}/>
     }
     return (
         <div className="flex justify-center font-crazy">
-            <div className="px-14 py-10 mt-20 w-2/5 rounded-3xl bg-gradient-to-r from-red-700 shadow-2xl shadow-current">
+        
+            <div className="px-14 py-10 mt-10 w-2/5 rounded-3xl bg-gradient-to-r from-red-700 shadow-2xl shadow-current">
                 <form onSubmit={handleSubmit(formSubmit)}>
                     <div className='mt-2 flex justify-center'>
                         <img className='w-1/5 rounded-full  hover:rotate-180 duration-700 hover:-scale-90' src={profile} alt='profile' />
                     </div>
+                    
                     <div className='mt-8 '>
                         <div className='flex gap-5 '>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-9 h-9">
@@ -74,5 +89,6 @@ export default function LoginPage() {
                 </form>
             </div>
         </div>
+        
     );
 }
