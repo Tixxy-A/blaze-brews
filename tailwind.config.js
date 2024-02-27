@@ -8,6 +8,7 @@ module.exports = {
     fontFamily:{
       cursive:["Lobster", 'cursive'],
       crazy:["Bebas Neue", ],
+      simple:["kanit", ],
     },
   },
   plugins: [],
