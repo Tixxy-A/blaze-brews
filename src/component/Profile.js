@@ -8,10 +8,10 @@ export default function Profile() {
     const [redirect,setRedirect]=useState();
     async function logout(){
         await axios.post('http://localhost:3001/logout');
-        setRedirect('/')
+        setRedirect('/login')
         setUser(null);
     }
-    console.log(user);
+   // console.log(user);
     if(redirect){
         return <Navigate to={redirect}/>
     }

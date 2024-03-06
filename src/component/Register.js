@@ -37,11 +37,11 @@ export default function RegisterPage() {
                             <div className='flex w-5/6'>
                                 <input className=' px-3 text-left text-white text-xl bg-transparent w-full focus:border-red-500 outline-none' type='text' placeholder='Name'
                                     {...register("name", {
-                                        required: {
+                                         required: {
                                             value: true,
                                             message: "Please enter name",
                                         },
-                                    })} />
+                                    })}/>
 
 
 

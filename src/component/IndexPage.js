@@ -11,11 +11,14 @@ export default function Index() {
         <div className="h-screen absolut">
 
             <img className="z-0 absolute left- top-0  object-contain  w-full" src={img} alt="fuck" />
-            <div className=' absolute w-2/5 top-60 left-20 z-30 text-center '>
-                <h1 className=' leading-normal p-2 mx-auto text-yellow-700 font-bold font-crazy text-7xl'><span className='bg-yellow-700 rounded-lg text-black px-2'>Celebrate life's finer</span> moments with the touch of class
+            <div className=' absolute w-2/5 top-60 left-20 z-10 text-center '>
+                <h1 className=' leading-normal  font-crazy text-6xl font-semibold text-sky-400'>Celebrate life's finer moments with the touch of class 
                 </h1>
+                <div className='mt-5'>
+                <p className='text-gray-300 text-lg font-simple leading-normal'>Blaze Brews is a leading online platform dedicated to providing beer enthusiasts with a wide selection of high-quality beers delivered straight to their doorstep. We cater to customers who appreciate the craft and artistry behind brewing, offering an extensive range of unique and flavorful brews from both local and international breweries.</p>
+                </div>
                 <div className='mt-20 flex gap-10 justify-center'>
-                    <Link to={'/login'} class="w-40 flex justify-center items-center text-yellow-200 border-2 rounded-lg border-yellow-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#FBA834,0_0_30px_#FBA834] hover:bg-yellow-500 hover:text-black" onClick={()=><Navigate to={'/login'}/>}>
+                    <Link to={'/login'} class="w-40 flex justify-center items-center text-yellow-200 border-2 rounded-lg border-sky-600 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#0C359E,0_0_30px_#0C359E] hover:bg-sky-300 hover:text-black" onClick={()=><Navigate to={'/login'}/>}>
                         Get Started
                     </Link>
 

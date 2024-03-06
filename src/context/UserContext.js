@@ -10,7 +10,7 @@ export function UserContextProvider({children}){
             try{
                 axios.get('http://localhost:3001/profile').then(res=>{
                     setUser(res.data);
-                    console.log(res.data);
+                    //console.log(res.data);
                 })
             }catch(e){
                 redirect('/');
