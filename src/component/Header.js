@@ -32,9 +32,9 @@ export default function Header() {
 
             </header>
             <header className='mt-2 w-1/3 flex justify-around'>
-                <Link className='flex py-2 px-5 rounded-full h-2/5 text-white outline-dotted'>home</Link>
-                <Link className='py-2 px-5 rounded-full h-2/5 text-white  outline-dotted'>about</Link>
-                <Link to={path} className='py-2 px-5 rounded-full h-2/5 text-white  outline-dotted '>
+                <Link className='flex py-2 px-8 rounded-full h-2/5 text-white outline-dotted'>home</Link>
+                <Link className='py-2 px-8 rounded-full h-2/5 text-white  outline-dotted'>about</Link>
+                <Link to={path} className='py-2 px-8 rounded-full h-2/5 text-white  outline-dotted '>
 
                     {
                         user &&

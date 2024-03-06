@@ -7,6 +7,8 @@ import LoginPage from './component/Login';
 import RegisterPage from './component/Register';
 import Shop from './component/Shop';
 import Profile from './component/Profile';
+import ForPass from './component/ForgetPassword'
+import Reset from './component/reset'
 import './App.css';
 import axios from 'axios';
 
@@ -22,6 +24,8 @@ function App() {
           <Route path='/register' element={<RegisterPage />} />
           <Route path='/shop' element={<Shop />} />
           <Route path='/profile' element={<Profile />} />
+          <Route path='/forget-password' element={<ForPass />} />
+          <Route path='/reset/:token' element={<Reset />} />
         </Route>
 
       </Routes>
